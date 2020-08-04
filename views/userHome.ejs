@@ -1,0 +1,19 @@
+<%- include("partials/header");-%>
+<h1 class="userhomeheader">WELCOME <%=name%></h1>
+<div id="container" class="mainbody">
+    <h1 class="bodyHeader">LISTS <i id="icon" class="fa fa-plus"></i></h1><form action="/addNewList" method="POST" autocomplete="off"><input class="bodyInput" name="newList" type="hidden" placeholder="Add New List"></form>
+    <ul>
+        <% for(let i=0;i<items.length;i++){%>
+            <%if(items[i].listName!=="favicon.ico"){%>
+        <li><span><form action="/deleteList" method="POST"><input type="hidden" name="hiddeninput"><button type="submit" class="deletebtn" name="button" value="<%=items[i].listName%>"><i class="fa fa-trash"></i></button></form></span><a href="/<%=items[i].listName %>"> <%=items[i].listName %> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></li>
+        <%}%>
+        <%}%>
+    </ul>
+</div>
+
+
+<form class="logoutform" action="logout" method="POST">
+    <button class="btn" id="userhomelogout" type="submit">logout</button>
+</form>
+
+<%- include("partials/footer");-%>

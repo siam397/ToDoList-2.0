@@ -1,0 +1,26 @@
+<%- include("partials/header");-%>
+<div class="loginPage">
+<img class="image" src="https://www.any.do/v4/images/og-image.png">
+<h1 class="heading">Login</h1>
+
+
+
+<form class="loginForm" action="/login" method="POST" autocomplete="off" aria-autocomplete="none">
+
+  <div class="user-input-wrp">
+    <br/>
+    <input style="background-color: transparent;" type="text" class="inputText" name="username" autofocus required/>
+    <span class="floating-label">USERNAME</span>
+  </div>
+  <hr class="line">
+  <div class="user-input-wrp-password">
+    <br/>
+    <input style="margin-top: 10px;" type="password" name="password" class="inputText" required/>
+    <span class="floating-label">PASSWORD</span>
+  </div>
+  <hr class="line">
+  <button type="submit" class="register" style="margin-left: 47%;">Submit</button>
+</form>
+
+</div>
+<%- include("partials/footer");-%>

@@ -1,0 +1,38 @@
+<%- include("partials/header");-%>
+<img class="image" src="https://www.any.do/v4/images/og-image.png">
+<h1 class="heading">Register</h1>
+
+
+
+<form class="loginForm" action="/register" method="POST" autocomplete="off">
+
+  <div class="user-input-wrp">
+    <br/>
+    <input type="email" class="inputText" name="email" required/>
+    <span class="floating-label">EMAIL</span>
+  </div>
+  <hr class="line">
+  <div class="user-input-wrp-password">
+    <br/>
+    <input style="margin-top: 10px;" type="text" name="username" class="inputText" required/>
+    <span class="floating-label">USERNAME</span>
+  </div>
+  <hr class="line">
+  <div class="user-input-wrp-password">
+    <br/>
+    <input style="margin-top: 10px;" type="password" name="password" class="inputText" required/>
+    <span class="floating-label">PASSWORD</span>
+  </div>
+  <hr class="line">
+  <div class="user-input-wrp-password">
+    <br/>
+    <input style="margin-top: 10px;" type="password" name="confirmPassword" class="inputText" required/>
+    <span class="floating-label"> CONFIRM PASSWORD</span>
+  </div>
+  <hr class="line">
+  <button type="submit" class="register" style="margin-left: 47%;">Submit</button>
+
+</form>
+
+
+<%- include("partials/footer");-%>

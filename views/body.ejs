@@ -1,0 +1,15 @@
+<%- include("partials/header");-%>
+
+
+<div id="container" class="mainbody">
+    <h1 class="bodyHeader"><%=title%> <i id="icon" class="fa fa-plus"></i></h1><form action="/add" method="POST" autocomplete="off"> <input type="hidden" name="title" value="<%=title%>"> <input class="bodyInput" name="newItem" type="hidden" placeholder="Add New Todo"></form>
+    <ul>
+        <% for(let i=0;i<items.length;i++){%>
+            <%if(items[i].name!==""){%>
+        <li><span><form action="/delete" method="POST"><input type="hidden" name="hiddeninput" value="<%=title%>"><button type="submit" class="deletebtn" name="button" value="<%=items[i].name%>"><i class="fa fa-trash"></i></button></form></span> <%=items[i].name %> </li>
+        <%}%>
+        <%}%>
+    </ul>
+</div>
+
+<%- include("partials/footer");-%>
